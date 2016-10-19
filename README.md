@@ -2,6 +2,13 @@
 
 Fiscal provides a simple interface to calculate the calendar dates for fiscal years and quarters. Fiscal has no dependencies and also offers a browser build (see `fiscal.min.js`).
 
+[![NPM](https://nodei.co/npm/fiscal.png?mini=true)](https://npmjs.org/package/fiscal)
+
+## Installing
+```shell
+npm install fiscal --save
+```
+
 ## Usage
 ```js
 const Fiscal = require('fiscal');
