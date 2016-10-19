@@ -1,0 +1,28 @@
+{
+  "name": "fiscal",
+  "version": "1.0.0",
+  "description": "Computes fiscal quarter and year date ranges",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MarkHerhold/fiscal.git"
+  },
+  "scripts": {
+    "test": "eslint . --ignore-pattern '*.min.js' && mocha test/",
+    "dist": "browserify index.js --standalone Fiscal -t [ babelify --presets [ es2015 ] ] -o fiscal.min.js",
+    "minify": "uglifyjs fiscal.min.js --screw-ie8 --preamble \"/* Fiscal by Mark Herhold - MIT Licensed */\" -o fiscal.min.js"
+  },
+  "keywords": [
+    "fiscal",
+    "quarter"
+  ],
+  "author": "Mark Herhold <mherhold@rti.org>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.3.13",
+    "babelify": "^7.2.0",
+    "chai": "^3.4.1",
+    "chai-datetime": "^1.4.0",
+    "mocha": "^2.3.4"
+  }
+}
