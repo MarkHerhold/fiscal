@@ -1,11 +1,12 @@
 {
-  "name": "fiscal",
+  "name": "@winstoncl/fiscal",
   "version": "1.0.0",
   "description": "Computes fiscal quarter and year date ranges",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/winstoncl/fiscal.git"
+    "url": "https://github.com/winstoncl/fiscal.git",
+    "directory": "@winstoncl/fiscal"
   },
   "publishConfig": {
     "@winstoncl:registry": "https://npm.pkg.github.com"
