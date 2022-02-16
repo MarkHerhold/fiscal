@@ -5,7 +5,10 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MarkHerhold/fiscal.git"
+    "url": "https://github.com/winstoncl/fiscal.git"
+  },
+  "publishConfig": {
+    "@winstoncl:registry": "https://npm.pkg.github.com"
   },
   "scripts": {
     "test": "eslint . --ignore-pattern '*.min.js' && mocha test/",
