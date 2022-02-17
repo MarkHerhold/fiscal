@@ -1,6 +1,6 @@
 {
   "name": "@winstoncl/fiscal",
-  "version": "1.0.0",
+  "version": "2.0.1",
   "description": "Computes fiscal quarter and year date ranges",
   "main": "index.js",
   "repository": {
@@ -12,7 +12,7 @@
     "@winstoncl:registry": "https://npm.pkg.github.com"
   },
   "scripts": {
-    "test": "eslint . --ignore-pattern '*.min.js' && mocha test/",
+    "test": "eslint . --ignore-pattern '*.min.js' && TZ=UTC mocha test/",
     "dist": "browserify index.js --standalone Fiscal -t [ babelify --presets [ es2015 ] ] -o fiscal.min.js",
     "minify": "uglifyjs fiscal.min.js --screw-ie8 --preamble \"/* Fiscal by Mark Herhold - MIT Licensed */\" -o fiscal.min.js"
   },
@@ -20,7 +20,18 @@
     "fiscal",
     "quarter"
   ],
-  "author": "Mark Herhold <mherhold@rti.org>",
+  "contributors": [
+    {
+      "name": "Mark Herhold",
+      "email": "mherhold@rti.org",
+      "url": "https://github.com/MarkHerhold"
+    },
+    {
+      "name": "Winston Poh",
+      "email": "winston@commonledger.com",
+      "url": "https://github.com/winstoncl"
+    }
+  ],
   "license": "MIT",
   "devDependencies": {
     "babel-preset-es2015": "^6.3.13",
