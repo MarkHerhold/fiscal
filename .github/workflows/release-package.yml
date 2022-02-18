@@ -14,6 +14,10 @@ jobs:
           node-version: 12
       - run: npm ci
       - run: TZ=UTC npm test
+      - run: npm lint
+      - run: npm build
+      - run: npm dist
+      - run: npm minify
 
   publish-gpr:
     needs: build
