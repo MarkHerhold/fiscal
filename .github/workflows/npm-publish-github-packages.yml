@@ -15,6 +15,9 @@ jobs:
           node-version: 16
       - run: npm ci
       - run: npm test
+      - uses: actions/upload-artifact@v2
+        with:
+          name: dist
 
   publish-gpr:
     needs: build
@@ -24,12 +27,17 @@ jobs:
       packages: write
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/download-artifact@v2
+        with:
+          name: dist
+
+      - name: Display structure of downloaded files
+        run: ls -R
       - uses: actions/setup-node@v2
         with:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
-      - run: npm pack
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
