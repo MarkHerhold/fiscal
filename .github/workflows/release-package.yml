@@ -14,10 +14,10 @@ jobs:
           node-version: 15.x
       - run: npm ci
       - run: TZ=UTC npm test
-      - run: npm lint
-      - run: npm build
-      - run: npm dist
-      - run: npm minify
+      - run: npm run lint
+      - run: npm run build
+      - run: npm run dist
+      - run: npm run minify
 
   publish-gpr:
     needs: build
