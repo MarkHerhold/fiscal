@@ -17,7 +17,7 @@
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
     "build": "tsc",
-    "dist": "browserify src/index.ts --standalone Fiscal -t [ babelify --presets [ esnext ] ] -o fiscal.min.js -p [ tsify --noImplicitAny ]",
+    "dist": "browserify src/index.ts --standalone Fiscal -t [ babelify --presets [ es2015 ] ] -o fiscal.min.js -p [ tsify --noImplicitAny ]",
     "minify": "uglifyjs fiscal.min.js --screw-ie8 --preamble \"/* Fiscal by Mark Herhold - MIT Licensed */\" -o fiscal.min.js"
   },
   "files": [
