@@ -18,7 +18,7 @@
     "lint": "tslint -p tsconfig.json",
     "build": "tsc",
     "dist": "browserify src/index.ts --standalone Fiscal -t [ babelify --presets [ es2015 ] ] -o fiscal.min.js -p [ tsify --noImplicitAny ]",
-    "minify": "uglifyjs fiscal.min.js --screw-ie8 --preamble \"/* Fiscal by Mark Herhold - MIT Licensed */\" -o fiscal.min.js"
+    "minify": "terser --compress --mangle --format 'preamble=\"/* Fiscal by Mark Herhold - MIT Licensed */\"' -o fiscal.min.js -- fiscal.min.js "
   },
   "files": [
     "dist/**/*"
@@ -57,7 +57,7 @@
   },
   "dependencies": {
     "browserify": "^17.0.0",
-    "tsify": "^5.0.4",
-    "uglify": "^0.1.5"
+    "terser": "^5.10.0",
+    "tsify": "^5.0.4"
   }
 }
