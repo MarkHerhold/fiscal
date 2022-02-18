@@ -3,7 +3,9 @@
 
 name: Node.js Package
 
-on: [push]
+on:
+  release:
+    types: [created]
 
 jobs:
   build:
@@ -15,7 +17,7 @@ jobs:
           node-version: 16
       - run: npm ci
       - run: npm run lint
-      - run: npm test
+      - run: TZ=UTC npm test
       - run: npm run dist
       - run: npm run build
       - run: npm run minify
