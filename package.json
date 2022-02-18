@@ -20,6 +20,9 @@
     "dist": "browserify src/index.ts --standalone Fiscal -t [ babelify --presets [ es2015 ] ] -o fiscal.min.js -p [ tsify --noImplicitAny ]",
     "minify": "terser --compress --mangle --format 'preamble=\"/* Fiscal by Mark Herhold - MIT Licensed */\"' -o fiscal.min.js -- fiscal.min.js "
   },
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "fiscal",
     "quarter"
