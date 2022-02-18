@@ -14,7 +14,12 @@ jobs:
         with:
           node-version: 16
       - run: npm ci
+      - run: npm run format
+      - run: npm run lint
       - run: npm test
+      - run: npm run dist
+      - run: npm run build
+      - run: npm run minify
       - uses: actions/upload-artifact@v2
         with:
           name: dist
@@ -27,6 +32,7 @@ jobs:
       contents: read
       packages: write
     steps:
+      - uses: actions/checkout@v2
       - uses: actions/download-artifact@v2
         with:
           name: dist
