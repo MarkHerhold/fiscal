@@ -21,7 +21,7 @@
     "minify": "terser --compress --mangle --format 'preamble=\"/* Fiscal by Mark Herhold - MIT Licensed */\"' -o fiscal.min.js -- fiscal.min.js "
   },
   "files": [
-    "dist/**/*"
+    "dist"
   ],
   "keywords": [
     "fiscal",
